@@ -15,13 +15,11 @@
 body {
     width: 100%;
     height: 100dvh;
-    // @include theme.theme-light;
+    // @include theme.theme-light; // initial implementation
     @include theme.apply-theme('light');
-    // @include theme.theme(light);
-    // background-color: function.addTransparency(variable.$color-gray, 0.1);
-    // @extend .dark-theme;
+    
     &.dark-theme {
-        // @include theme.theme-dark;
+        // @include theme.theme-dark; // initial implementation
         @include theme.apply-theme('dark');
     }
 

@@ -3,6 +3,7 @@
 @use '../../assets/sass/variables' as variable;
 @use 'sass:map';
 
+
 @mixin theme-light {
     background-color: variable.$light-theme-background;
     color: variable.$light-theme-font;
@@ -13,29 +14,16 @@
     color: variable.$dark-theme-font;
 }
 
+// creates a map for the theme mode
 $themes: (
     'light': theme-light,
     'dark': theme-dark,
 );
 
+// loops through the theme map
 @mixin apply-theme($theme) {
     @each $key, $value in map-get($map: $themes, $key: $theme) {
         #{$key}: $value;
     }
 }
 
-// @mixin apply-theme($theme) {
-//     @each $key, $value in map-get($themes, $theme) {
-//       #{$key}: $value;
-//     }
-//   }
-  
-
-
-@function theme ($mode) {
-    @if ($mode == 'light') {
-        @return theme-light;
-    }@else {
-        @return theme-dark;
-    }
-}
