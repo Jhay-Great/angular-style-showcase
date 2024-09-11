@@ -1,5 +1,10 @@
-@mixin flex {
+@mixin flex-column {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    // gap: 10px;
+}
+
+@mixin flex-row {
+    display: flex;
+    align-items: center;
 }

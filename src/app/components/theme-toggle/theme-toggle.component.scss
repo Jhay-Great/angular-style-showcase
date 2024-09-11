@@ -10,16 +10,16 @@ input[type="checkbox"] {
   }
 
   &:checked + label:after {
-    left: calc(100% - 5px);
-    transform: translateX(-100%);
+    left: calc(100% - 7px);
+    transform: translateX(-105%);
   }
 }
 
 label {
   cursor: pointer;
   text-indent: -9999px;
-  width: 120px;
-  height: 60px;
+  width: 70px;
+  height: 40px;
   background: variable.$color-gray;
   display: block;
   border-radius: 100px;
@@ -30,8 +30,8 @@ label {
     position: absolute;
     top: 5px;
     left: 5px;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background: variable.$color-white;
     border-radius: 90px;
     transition: 0.3s;
@@ -39,5 +39,6 @@ label {
 
   &:active:after {
     width: 130px;
+    // width: 100px;
   }
 }
