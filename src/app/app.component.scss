@@ -1,7 +1,11 @@
 @use '../assets/sass/mixins' as mixin;
+@use '../assets/sass/variables' as variable;
 
 app-header {
     @include mixin.flex-column;
     width: 100%;
     height: 70dvh;
+    position: relative;
+    background-color: variable;
+
 }

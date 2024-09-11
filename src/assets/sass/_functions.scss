@@ -6,6 +6,10 @@
     @return $size + $length;
 }
 
+@function double($size) {
+    @return $size * 2;
+}
+
 @function addTransparency($base-color, $transparency-level) {
     @return rgba($base-color, $transparency-level);
   }

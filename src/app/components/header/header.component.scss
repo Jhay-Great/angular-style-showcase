@@ -1,5 +1,6 @@
 @use '../../../assets/sass/mixins' as mixin;
 @use '../../../assets/sass/variables' as variable;
+@use '../../../assets/sass/functions' as function;
 
 
 nav {
@@ -7,8 +8,27 @@ nav {
     justify-content: space-between;
     height: variable.$large;
     padding: variable.$padding;
+
+    p {
+        font-family: variable.$font-nerko-one;
+        letter-spacing: -3px;
+        font-size: function.double(variable.$small);
+    }
 }
 
 app-theme-toggle {
     @include mixin.flex-row;
+}
+
+.banner {
+    flex: 1;
+    @include mixin.flex-row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    p {
+        font-size: variable.$large;
+        font-family: variable.$font-sofadi-one; // probably declare in global styles
+    }
 }
