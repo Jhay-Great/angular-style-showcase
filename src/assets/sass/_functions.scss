@@ -1,0 +1,11 @@
+@function reduce($size, $length) {
+    @return $size - $length;
+}
+
+@function increase($size, $length) {
+    @return $size + $length;
+}
+
+@function addTransparency($base-color, $transparency-level) {
+    @return rgba($base-color, $transparency-level);
+  }
