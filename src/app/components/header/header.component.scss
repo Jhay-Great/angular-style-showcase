@@ -18,6 +18,7 @@ nav {
 
 app-theme-toggle {
     @include mixin.flex-row;
+    overflow: hidden;
 }
 
 .banner {

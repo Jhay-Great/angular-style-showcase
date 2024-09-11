@@ -1,5 +1,6 @@
 @use './assets/sass/variables.scss' as variable;
 @use './assets/sass/functions.scss' as function;
+@use './assets/sass/theme' as theme;
 
 * {
     margin: 0;
@@ -7,10 +8,23 @@
     box-sizing: border-box;
 }
 
+.dark-theme {
+    @include theme.theme-dark;
+}
+
 body {
     width: 100%;
     height: 100dvh;
-    background-color: function.addTransparency(variable.$color-gray, 0.1);
+    // @include theme.theme-light;
+    @include theme.apply-theme('light');
+    // @include theme.theme(light);
+    // background-color: function.addTransparency(variable.$color-gray, 0.1);
+    // @extend .dark-theme;
+    &.dark-theme {
+        // @include theme.theme-dark;
+        @include theme.apply-theme('dark');
+    }
+
     
     app-root {
         display: flex;

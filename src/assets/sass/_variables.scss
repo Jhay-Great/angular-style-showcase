@@ -1,3 +1,5 @@
+@use './functions.scss' as function;
+
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Sofadi+One&display=swap');
 
 
@@ -12,6 +14,13 @@ $color-mauve: #424769;
 $color-mauve-dark: #2d3250;
 $color-primary-v1: #f9b17a; 
 
+// theme 
+// $light-theme-background: $color-white;
+$light-theme-background: function.addTransparency($color-gray, 0.1);;
+$light-theme-font: $color-black;
+
+$dark-theme-background: $color-mauve-dark;
+$dark-theme-font: $color-white;
 
 
 // fonts
@@ -27,3 +36,17 @@ $very-small: .8rem;
 
 // padding
 $padding: 1rem;
+
+
+
+// themes using map
+$themes: (
+  light: (
+    background: #ffffff,
+    text: #000000
+  ),
+  dark: (
+    background: #000000,
+    text: #ffffff
+  )
+);
