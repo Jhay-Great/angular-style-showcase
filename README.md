@@ -30,3 +30,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### Assets from
 - <a href="https://storyset.com/cute">Cute illustrations by Storyset</a>
 - <a href="https://storyset.com/cute">Cute illustrations by Storyset</a>
+- <a href="https://www.freepik.com/free-vector/full-moon-phase-night-icon_70015182.htm#query=moon%20svg&position=30&from_view=keyword&track=ais_hybrid&uuid=e9dfce83-0bbf-45cd-83b2-cbd52f19fbbc">Image by jemastock on Freepik</a>
+- <a href="https://www.freepik.com/free-vector/grey-full-moon-illustration-white-background_16359327.htm#query=moon%20svg&position=3&from_view=keyword&track=ais_hybrid&uuid=66c26a18-45ff-42c8-9137-3117022df732">Image by rawpixel.com on Freepik</a>

@@ -14,7 +14,7 @@
 
 body {
     width: 100%;
-    height: 100dvh;
+    min-height: 100dvh;
     // @include theme.theme-light; // initial implementation
     @include theme.apply-theme('light');
     

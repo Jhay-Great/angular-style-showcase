@@ -1,5 +1,6 @@
 @use '../assets/sass/mixins' as mixin;
 @use '../assets/sass/variables' as variable;
+@use '../assets/sass/functions' as function;
 
 app-header {
     @include mixin.flex-column;
@@ -8,4 +9,20 @@ app-header {
     background-color: variable;
     position: relative;
 
+}
+
+app-main {
+    @include mixin.flex-column;
+    align-items: center;
+    height: fit-content;
+    gap: variable.$large;
+    padding-block: function.double(variable.$large);
+}
+
+app-footer {
+    @include mixin.flex-row;
+    align-items: center;
+    height: 80px;
+    font-size: variable.$very-small;
+    padding-inline: variable.$padding;
 }

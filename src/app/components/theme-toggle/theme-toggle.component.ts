@@ -18,17 +18,17 @@ export class ThemeToggleComponent {
   ) {};
 
   toggleTheme() {
-    const mode = this.themeState === 'light' ? 'dark' : 'light';
+    // const mode = this.themeState === 'light' ? 'dark' : 'light';
     // const html = document.documentElement;
-    const html = document.body;
+    const body = document.body;
     
     if (this.themeState === 'light') {
       this.themeState = 'dark';
-      html.classList.add('dark-theme');
+      body.classList.add('dark-theme');
       
     }else {
       this.themeState = 'light';
-      html.classList.remove('dark-theme');
+      body.classList.remove('dark-theme');
 
     }
     

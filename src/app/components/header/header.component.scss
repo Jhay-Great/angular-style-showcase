@@ -27,12 +27,71 @@ app-theme-toggle {
     justify-content: center;
     align-items: center;
     width: 100%;
+    flex-wrap: wrap;
 
     p {
         font-size: variable.$large;
         font-family: variable.$font-sofadi-one; // probably declare in global styles
+        text-align: center;
+    }
+
+    
+    .moon {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        // position: absolute;
+        z-index: -1;
+        bottom: 0%;
+        // inset: 0;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 50%;
+        // box-shadow: 0 0 20px 20px function.addTransparency(variable.$color-black, 0.1), 0 0 20px 2px;
+        box-shadow: 0 0 10px 10px function.addTransparency(variable.$color-black, 0.1), 0 0 60px 4px;
+
+
+
+        &::after {
+            position: absolute;
+            content: '';
+            inset: 0;
+            border-color: function.addTransparency(variable.$color-black, 0.3);
+            border-radius: 50%;
+            box-shadow: -40px -40px 50px 2px variable.$color-black inset;
+        }
+
+        & > div {
+            width: 200%;
+            height: 100%;
+            animation: spin 40s linear alternate infinite;
+            background: url(../../../assets/images/moon.png) center;
+            // background: url(../../../assets/svgs/moon\ 2.svg);
+
+            @keyframes spin {
+                to {
+                    transform: translateX(-50%);
+                }
+            }
+            
+        }
     }
 }
+
+@media screen and (min-width: 780px) {
+    // .banner {
+    //     .moon {
+    //         // position: absolute;
+    //         position: relative;
+    //         // z-index: none;
+    //         // bottom: -50%;
+    //         // inset: 0;
+    //     }
+
+    // }
+}
+
+
 
 .split-moons {
     width: 10rem;
@@ -47,3 +106,40 @@ app-theme-toggle {
     filter: blur(10rem);
     /* transform: translateX(-50%); */
 }
+
+
+
+
+// .circle {
+//     --primary-color: #031930;
+//     --secondary-color: #B4D6F9;
+//     --gradient-color-1: #213A59;
+//     --gradient-color-2: #243F61;
+//     --gradient-color-3: #162F4D;
+//     /* --gradient-color-3: #031930; */
+//     --text-color: #fff;
+    
+    
+//     width: 300px;
+//     height: 300px;
+//     border: none;
+//     border-radius: 100%;
+
+//     position: absolute;
+//     z-index: -1;
+// }
+// .circle-1 {
+//     bottom: 0;
+//     right: 10px;
+//     /* background: linear-gradient(125deg, var(--gradient-color-1) 1%, var(--gradient-color-2) 30%, var(--gradient-color-3) 41%, var(--primary-color) 100%); */
+//     background: linear-gradient(125deg, var(--gradient-color-1) -10%, var(--gradient-color-2) 16%, var(--gradient-color-3) 22%, var(--primary-color) 42%);
+// }
+// .circle-2 {
+//     top: 10px;
+//     left: 10px;
+//     background: linear-gradient(304deg, var(--gradient-color-1) 1%, var(--gradient-color-2) 30%, var(--primary-color) 42%); 
+//     /* 213A59 */
+// }
+
+
+

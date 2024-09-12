@@ -1,0 +1,12 @@
+@use '../../../assets/sass/variables' as variable;
+
+img {
+    width: 400px;
+    height: 100%;
+}
+
+p {
+    font-size: variable.$medium;
+    font-family: "Sofadi One", system-ui;
+    text-align: center;
+}
